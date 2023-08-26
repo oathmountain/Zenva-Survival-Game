@@ -16,6 +16,7 @@ MonoBehaviour:
   description: A common resource, gathered from stone
   type: 0
   icon: {fileID: 21300000, guid: a8a14115eae24f2469352c2c0f56ee93, type: 3}
-  dropPrefab: {fileID: 0}
+  dropPrefab: {fileID: 3278824508586392086, guid: b7fdb53302b50c449b343a51ba917a36, type: 3}
   canStack: 1
   maxStackAmount: 12
+  consumables: []
