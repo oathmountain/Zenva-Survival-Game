@@ -49,6 +49,18 @@ public class EquipTool : Equip
 
     public void OnHit()
     {
-        UnityEngine.Debug.Log("Hit Detected");
+        Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        RaycastHit hit;
+
+        if(Physics.Raycast(ray, out hit, attackDistance)){
+            if(doesGatherResources && hit.collider.GetComponent<Resource>())
+            {
+                hit.collider.GetComponent<Resource>().Gather(hit.point, hit.normal);
+            }
+            if(doesDealDamage && hit.collider.GetComponent<IDamagable>() != null)
+            {
+                hit.collider.GetComponent<IDamagable>().TakePhysicalDamage(damage);
+            }
+        }
     }
 }
