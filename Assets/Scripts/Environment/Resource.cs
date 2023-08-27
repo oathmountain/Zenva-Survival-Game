@@ -20,7 +20,7 @@ public class Resource : MonoBehaviour
             Inventory.instance.AddItem(itemToGive);
             capacity--; 
         }
-        Destroy(Instantiate(hitParticle, hitPoint, Quaternion.LookRotation(hitNormal, Vector3.up)), 1.0);
+        Destroy(Instantiate(hitParticle, hitPoint, Quaternion.LookRotation(hitNormal, Vector3.up)), 1.0f);
 
         if(capacity <= 0)
         {
