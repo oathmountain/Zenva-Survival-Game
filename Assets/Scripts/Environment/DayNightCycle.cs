@@ -26,6 +26,13 @@ public class DayNightCycle : MonoBehaviour
     public AnimationCurve lightingIntensityMultiplier;
     public AnimationCurve reflectionsIntensityMultiplier;
 
+    public static DayNightCycle instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         timeRate = 1.0f / fullDayLength;

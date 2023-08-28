@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4681925692974810032}
   - component: {fileID: 6093763486448215694}
+  - component: {fileID: 4531429830878927301}
   m_Layer: 9
   m_Name: Building_Bed
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 4504262338227837550}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &6093763486448215694
 BoxCollider:
@@ -54,6 +55,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2870257, y: 1.0536828, z: 3.0687976}
   m_Center: {x: -0.058117986, y: 0.4635322, z: -0.045212507}
+--- !u!114 &4531429830878927301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820789801249726531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b5dffdcb38cfa4f980f25c2a08625c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wakeUpTime: 0.3
+  startCanSleepTime: 0.75
+  endCanSleepTime: 0.25
+  sleepToGive: 500
 --- !u!1001 &4109785099980045701
 PrefabInstance:
   m_ObjectHideFlags: 0

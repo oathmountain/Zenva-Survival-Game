@@ -62,6 +62,11 @@ public class EquipBuildingKit : Equip
 
     public override void OnAltAttackInput()
     {
+        if(curBuildingPreview != null)
+        {
+            Destroy(curBuildingPreview.gameObject);
+        }
+
         buildingWindow.SetActive(true);
         PlayerController.instance.ToggleCursor(true);
     }
@@ -123,6 +128,9 @@ public class EquipBuildingKit : Equip
 
     void OnDestroy()
     {
-
+        if (curBuildingPreview != null)
+        {
+            Destroy(curBuildingPreview.gameObject);
+        }
     }
 }
