@@ -16,6 +16,13 @@ public class PlayerNeeds : MonoBehaviour, IDamagable
 
     public UnityEvent onTakeDamage;
 
+    public static PlayerNeeds instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         health.curValue = health.startValue;

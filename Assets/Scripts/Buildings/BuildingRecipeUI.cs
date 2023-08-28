@@ -28,7 +28,7 @@ public class BuildingRecipeUI : MonoBehaviour
 
         for(int i = 0; i < resourceCost.Length; i++)
         {
-            if (i < resourceCost.Length)
+            if (i < recipe.cost.Length)
             {
                 resourceCost[i].gameObject.SetActive(true);
 
@@ -60,6 +60,14 @@ public class BuildingRecipeUI : MonoBehaviour
 
     public void OnClickButton()
     {
-
+        if (canBuild)
+        {
+            EquipBuildingKit.instance.SetNewBuildingRecipe(recipe);
+        }
+        else
+        {
+            PlayerController.instance.ToggleCursor(true);
+            gameObject.SetActive(false);
+        }
     }
 }
