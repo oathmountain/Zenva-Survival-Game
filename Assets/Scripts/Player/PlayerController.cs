@@ -26,9 +26,13 @@ public class PlayerController : MonoBehaviour
     //components
     private Rigidbody rig;
 
+
+    //singleton
+    public static PlayerController instance;
     void Awake()
     {
         rig = GetComponent<Rigidbody>();
+        instance = this;
     }
     void Start()
     {
